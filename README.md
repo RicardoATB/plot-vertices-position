@@ -10,7 +10,8 @@
 
 <img src="https://github.com/RicardoATB/plot-vertices-position/blob/main/output/output.gif" width="65%" height="65%" />
 
-<br /><br />Output file containing (X,Y) position and inclination angle of each vertex element:
+
+Output file containing (X,Y) position and inclination angle of each vertex element:
 ```
 #  X       Y            Comment
  20.79 	 -8.61	# vertex  1 @ -112.50°
