@@ -1,6 +1,6 @@
 **Description**: Calculate position (X,Y) and plot graphical representation of components placed at the vertices of a geometric shape.
 
-**Input**: `./plot-vertices.py --vertices 8 --width 3 --height 5 --diameter 50 --flat no --output vertices.txt`
+**Input example**: `./plot-vertices.py --vertices 8 --width 3 --height 5 --diameter 50 --flat no --output vertices.txt`
 
 **Output**:
 
