@@ -26,7 +26,7 @@ def main():
 
     alpha = int_angle_comp()
 
-    plt.figure(figsize=(30, 30))
+    plt.figure(figsize=(20, 20))
     internal_angles = []
     vert_angle = 360/num_vert
     tilt_angle = 0
