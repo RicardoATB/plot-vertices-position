@@ -78,7 +78,7 @@ def main():
     plot_geometric_shape()
     delete_last_coord()
 
-    # print to stdout contents of "vertices.txt"
+    # print to stdout contents of args.output
     with open(args.output, "r+") as handle:
         list_vertices = handle.read()
         print(list_vertices)
