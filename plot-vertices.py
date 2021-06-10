@@ -86,7 +86,7 @@ def main():
     plt.show()
 
 def parse_args():
-    parser = argparse.ArgumentParser(description="Calculate position and plot graphical representation \
+    parser = argparse.ArgumentParser(description="Calculate position and plot graphical representation  \
         of components placed at the vertices of a geometric shape", epilog='Example: ./plot-vertices.py \
         --vertices 8 --width 3 --height 5 --diameter 50 --flat yes --output vertices.txt')
     parser.add_argument("--vertices", metavar="", required=True,
@@ -100,7 +100,7 @@ def parse_args():
     parser.add_argument("--flat", metavar="", required=True, type=str, choices=["yes", "no"],
         help="Bottom side flat to horizontal? (yes/no)")
     parser.add_argument("--output", metavar="", required=True,
-        type=str, help="output filename")
+        type=str, help="Output filename")
     args = parser.parse_args()
     return args
 
