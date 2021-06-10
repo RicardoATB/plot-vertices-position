@@ -1,5 +1,7 @@
 **Description**: Calculate position (X,Y) and plot graphical representation of components placed at the vertices of a geometric shape.
 
+**Motivation**: As my PCB software didn't have the feature of placing elements equally spaced in a circle, I created my solution.
+
 **Input example**: `./plot-vertices.py --vertices 8 --width 3 --height 5 --diameter 50 --flat no --output vertices.txt`
 
 **Output**:
@@ -19,4 +21,4 @@ Output file containing (X,Y) position and inclination angle of each vertex eleme
   8.61 	-20.79	# vertex  8 @  202.50°
 ```
 
-**Motivation**: PCB
+
