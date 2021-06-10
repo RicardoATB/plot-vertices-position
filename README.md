@@ -8,7 +8,7 @@
 
 **Output**:
 
-<img src="https://github.com/RicardoATB/plot-vertices-position/blob/main/output/output.gif" width="65%" height="65%" />
+<img src="https://github.com/RicardoATB/plot-vertices-position/blob/main/output/output.gif" width="65%" height="65%" /><br /><br />
 
 Output file containing (X,Y) position and inclination angle of each vertex element:
 ```
