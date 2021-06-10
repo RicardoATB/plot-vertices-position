@@ -1,6 +1,6 @@
 **Description**: Calculate position (X,Y) and plot graphical representation of components placed at the vertices of a geometric shape.
 
-**Motivation**: As my PCB software didn't have the feature of placing elements equally spaced in a circle, I created my solution:
+**Motivation**: As my PCB software didn't have the feature of placing components equally spaced in a circle, I created my solution by calculating the (X,Y) coordinates along with each elements rotation angle:
 
 <img src="https://github.com/RicardoATB/plot-vertices-position/blob/main/output/board-top.png" width="50%" height="50%" />
 
