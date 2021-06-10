@@ -1,4 +1,4 @@
-**Description**:
+**Description**: Calculate position (X,Y) and plot graphical representation of components placed at the vertices of a geometric shape.
 
 **Input**: `./plot-vertices.py --vertices 8 --width 3 --height 5 --diameter 50 --flat no --output vertices.txt`
 
@@ -19,4 +19,4 @@ Output file containing (X,Y) position and inclination angle of each vertex eleme
   8.61 	-20.79	# vertex  8 @  202.50°
 ```
 
-**Usage**: PCB
+**Motivation**: PCB
