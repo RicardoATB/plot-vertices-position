@@ -1,4 +1,4 @@
-**Project Description**: Calculate position (X,Y) and plot graphical representation of components placed at the vertices of a geometric shape.
+**Description**: Calculate position (X,Y) and plot graphical representation of components placed at the vertices of a geometric shape.
 
 **Motivation**: As my _PCB software CAD_ didn't have the feature of placing components equally spaced in a circle, I created my solution by calculating the (X,Y) coordinates + rotation angle of each element:
 
