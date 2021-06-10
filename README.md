@@ -2,13 +2,13 @@
 
 **Motivation**: As my PCB software didn't have the feature of placing components equally spaced in a circle, I created my solution by calculating the (X,Y) coordinates + rotation angle of each element:
 
-<img src="https://github.com/RicardoATB/plot-vertices-position/blob/main/output/board-top.png" width="60%" height="60%" />
+<img src="https://github.com/RicardoATB/plot-vertices-position/blob/main/output/board-top.png" width="80%" height="80%" />
 
 **Input example**: `./plot-vertices.py --vertices 8 --width 3 --height 5 --diameter 50 --flat no --output vertices.txt`
 
 **Output**:
 
-<img src="https://github.com/RicardoATB/plot-vertices-position/blob/main/output/output.gif" width="55%" height="55%" />
+<img src="https://github.com/RicardoATB/plot-vertices-position/blob/main/output/output.gif" width="65%" height="65%" />
 
 Output file containing (X,Y) position and inclination angle of each vertex element:
 ```
