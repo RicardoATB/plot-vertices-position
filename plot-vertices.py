@@ -1,7 +1,7 @@
 #!/usr/bin/python3.8
 
-# Description: Program used to output the coordinates and angles of components placed at
-#              the vertices of a geometric shape with n-sides
+# Description: Calculate position (X,Y) and plot graphical representation of components placed
+#              at the vertices of a geometric shape
 # Author:      Ricardo Augusto Teixeira Barbosa
 # Source code: https://github.com/RicardoATB/plot-vertices-position
 
@@ -14,7 +14,7 @@ import sys
 
 def main():
 
-    global num_vert, comp_x, comp_y, radius, tilt, alpha
+    global num_vert, comp_x, comp_y, radius, tilt, alpha, args
 
     args = parse_args()
 
@@ -39,7 +39,7 @@ def main():
     for i in range(0, num_vert+1):
         internal_angles.append(float(tilt_angle + i*vert_angle))
 
-    with open("vertices.txt", "w") as f_out:
+    with open(args.output, "w") as f_out:
         f_out.write("#  X       Y            Comment\n")  # table header
         for i in internal_angles:
             # quadrant I
@@ -100,7 +100,7 @@ def parse_args():
     parser.add_argument("--flat", metavar="", required=True, type=str, choices=["yes", "no"],
         help="Bottom side flat to horizontal? (yes/no)")
     parser.add_argument("--output", metavar="", required=True,
-        type=str, help="Bottom side flat to horizontal? (yes/no)")
+        type=str, help="output filename")
     args = parser.parse_args()
     return args
 
@@ -114,9 +114,9 @@ def slope(x, y):
     else:
         return (y/x)
 
-# Finding a point along a line a certain distance away from another point
+# Find a point along a line a certain distance away from another point
 # Math formula: https://math.stackexchange.com/questions/175896/finding-a-point-along-a-line-a-\
-#certain-distance-away-from-another-point
+# certain-distance-away-from-another-point
 def comp_center_x(comp_y, x, y, q, m):
     if (q == 1 or q == 4):
         return (x + comp_y/(math.sqrt(1 + m*m)))
@@ -128,7 +128,7 @@ def int_angle_comp():
 
 # Calculate third point of a triangle given two points and angles
 # Math formula: https://math.stackexchange.com/questions/1725790/calculate-third-point-of-triangle-\
-#from-two-points-and-angles
+# from-two-points-and-angles
 def comp_center_coord(x, y, comp_vert_x, comp_vert_y):
     #global x3, y3
     comp_center_pair = []
@@ -149,7 +149,7 @@ def comp_center_coord(x, y, comp_vert_x, comp_vert_y):
     comp_center_pair.append((1/(a3*a3))*(v*RHS1 + u*RHS2))
     return comp_center_pair
 
-# Ploting components (green rectangles)
+# Plot components (green rectangles)
 def plot_component(q, x, y, angle):
     center_pair = []
     m = slope(x, y)
@@ -162,9 +162,9 @@ def plot_component(q, x, y, angle):
                          comp_x, comp_y, angle, facecolor="none", ec="green", linewidth=5)
     plt.gca().add_patch(rect)
 
-# ploting connected geometric shape (gray line)
+# Plot connected geometric shape (gray line)
 def plot_geometric_shape():
-    with open("vertices.txt") as f:
+    with open(args.output) as f:
         # skipping first comment row
         lines = (line for line in f if not line.startswith("#"))
         data = np.loadtxt(lines)
@@ -174,9 +174,9 @@ def plot_geometric_shape():
     plt.axis('equal')
     plt.draw()
 
-# deleting last coordinate from "vertices.txt" (as it was just used to close the geometric shape w/ gray line)
+# Delete last coordinate from args.output (as it was just used to close the geometric shape w/ gray line)
 def delete_last_coord():
-    with open("vertices.txt", "r+") as f:
+    with open(args.output, "r+") as f:
         lines = f.readlines()
         # skip last line (same coordinate as the first)
         lines_minus_last = lines[:-1]
