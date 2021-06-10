@@ -1,6 +1,6 @@
 **Description**:
 
-**Input**:
+**Input**: `./plot-vertices.py --vertices 8 --width 3 --height 5 --diameter 50 --flat no --output vertices.txt`
 
 **Output**:
 
